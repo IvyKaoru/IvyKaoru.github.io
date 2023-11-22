@@ -1,0 +1,80 @@
+.goods-group
+{
+    width:1230px;
+    height: auto;
+    border-bottom:1px dashed rgb(212, 204, 204);
+    display:flex;
+    padding:0px;
+    flex-wrap:wrap;  /*若超過邊框會自動換行*/
+    margin:auto;
+}
+.goods{width:185px;
+    height: auto;
+    margin:10px;
+    padding:0px;
+    display:grid;
+    /* border:block; */
+}
+/* 滑鼠經過時會變化 */
+.goods:hover{
+    width:185px;
+    background-color: #fefad1;
+    cursor:pointer;
+}
+div img{
+    width:80%;
+    /* float:table-header-group; */
+    padding:5px 10px 20px 10px;
+    margin: auto;
+}
+.introduce{
+    color:#cb3b31;
+    margin:0px 0px 0px 10px;
+    font-size: smaller;
+}
+h3{
+    margin:0px 10px 20px 10px;
+    font-size: small;
+    color: #666666;
+    font-weight: 100;
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+p{
+    font-size: 12px;
+    margin:0px 20px 0px 10px;
+    padding:0px;
+}
+p span{font-size: 12px;}
+.price{
+    color:#c53a71;
+    font-size:x-large;
+    margin:0px 20px 0px 10px;
+    padding:0px;
+}
+.star{color:rgb(156, 156, 156);}
+.Remark{
+    background-color:  rgb(247, 247, 247);
+    width:170px;
+    margin:2px 7.5px 10px 7.5px;
+    padding:auto;
+    clear: both;
+}
+.Remark button{
+    background-color: rgb(249, 95, 121);
+    color:white;
+    border:0px;
+    display: inline;
+    float: right;
+    margin:2px;
+    border-radius:5px;
+    font-size: 12px;
+}
+.Remark p{
+    color:rgb(99, 98, 98);
+    margin:2px; 
+    font-size: 14px;
+    padding-left: 30px;
+}
