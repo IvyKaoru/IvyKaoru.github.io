@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待辦清單</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+        <div class="input-group m-3 mx-auto" style="width:95%;">
+            <input type="text" class="form-control" placeholder="todo..." aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-primary" type="button" id="button-addon2">新增</button>
+        </div>
+        <div id="todoList"></div>
+    <script>
+        window.onload=function(){
+            //確認是否已有待辦事項
+            var todos=JSON.parse(localStorage.getItem('todos'))||[];
+            //初始化頁面
+            updateToDoList();
+            document.getElementById("button-addon2").addEventListener("click",function(){
+                //取得使用者輸入的資料(移除頭尾的空白字元)
+                var newToDoInput=document.querySelector(".form-control");
+                var inputValue=newToDoInput.value.trim();
+
+                //判斷輸入值不是空值就輸入到todos->localstorage
+                if(inputValue !==''){
+                    todos.push({
+                        text:inputValue,completed:false
+                    });
+                    //清空輸入框
+                    newToDoInput.value="";
+                    updateToDoList();
+                    updateLocalStorage();
+                }
+            });
+        function deleteToDo(index){
+            //刪除1個索引值為index的項目
+            todos.splice(index,1);
+            //更新localstorage跟todolist清單
+            updateToDoList();
+            updateLocalStorage();
+        }
+        //若checkbox被點擊則顯示是否被解決false->true/true->false
+        function changeToDo(index){
+            todos[index].completed=!todos[index].completed;
+            updateToDoList();
+            updateLocalStorage();
+        }
+        function updateToDoList(){
+            //取得除輸入框、輸入按鈕外的頁面空間
+            var todoListContainer=document.getElementById('todoList');
+            todoListContainer.innerHTML='';
+            todos.forEach(function(todo,index) {
+                //以下為排版需求
+                var btnToolbar=document.createElement('div');
+                btnToolbar.className='btn-toolbar m-3 border py-4 px-3';
+                var todoItem=document.createElement('div');
+                todoItem.className='input-group mb-1 w-100';
+                var checkboxGroup=document.createElement('div');
+                checkboxGroup.className='input-group-text';
+
+                var checkbox=document.createElement('input');
+                checkbox.className='form-check-input';
+                checkbox.type='checkbox';
+                checkbox.checked=todo.completed;
+                checkbox.addEventListener('change',function(){
+                    changeToDo(index);
+                });
+                
+                //顯示輸入的文字並且不能修改
+                var todoText=document.createElement('input');
+                todoText.className='form-control input-group-text text-start rounded-end';
+                todoText.type='text';
+                todoText.value=todo.text;
+                todoText.disabled=true;
+
+                var editBtn=document.createElement('button');
+                editBtn.className='btn btn-warning rounded-2 mx-3';
+                editBtn.textContent="編輯";
+                //使使用者可輸入文字修改並改變為"保存"鍵
+                editBtn.addEventListener("click",function(){
+                    editBtn.className='btn btn-success rounded-2 mx-3';
+                    editBtn.textContent='保存';
+                    todoText.disabled=false;
+                    editBtn.addEventListener('click',function(){
+                        var newText=todoText.value;
+                        if(newText!==null){
+                            todos[index].text=newText;
+                            updateToDoList();
+                            updateLocalStorage();
+                    }
+                })});
+
+                var deleteBtn=document.createElement('button');
+                deleteBtn.className='btn btn-danger rounded-2';
+                deleteBtn.textContent='刪除';
+                deleteBtn.addEventListener("click",function(){
+                    deleteToDo(index);
+                });
+
+                if(todo.completed){
+                    todoText.style.textDecoration='line-through';
+                }
+
+                checkboxGroup.appendChild(checkbox);
+                
+                todoItem.appendChild(checkboxGroup);
+                todoItem.appendChild(todoText);
+                todoItem.appendChild(editBtn);
+                todoItem.appendChild(deleteBtn);
+                
+                btnToolbar.appendChild(todoItem);
+                
+                todoListContainer.appendChild(btnToolbar);
+            });
+        }
+        //更新localstorage(新增項目進去)
+        function updateLocalStorage(){
+            localStorage.setItem('todos',JSON.stringify(todos));
+        }
+        }
+
+    </script>
+</body>
+</html>
