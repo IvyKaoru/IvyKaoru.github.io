@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的最愛</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <style>
+        .nav-link:hover{
+            background: #e6e6e6;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+    <nav class="bg-body d-flex pt-4" style="width: 1200px;margin: auto;">此為導覽列</nav>
+    <!-- 左側導覽列 -->
+    <div class="bg-light">
+        <div class="d-flex pt-4" style="width: 1200px;margin:auto;">
+            <nav class="navbar navbar-light bg-body flex-column align-items-stretch m-3 rounded p-0 h-25"
+                id="navbar-member">
+                <div class="d-flex justify-content-center rounded"
+                    style="background:linear-gradient(#6cabd3,#6eb3d2,white);height: 275px;">
+                    <div class="flex-shrink-0 mt-4">
+                        <img src="img/avatar.png" class="rounded-circle border border-2 border-white mx-auto d-block"
+                            style="width: 90px;height: 90px;">
+                        <p class="mt-4 text-light d-flex justify-content-center fs-4 fw-bold mb-0">用戶名</p>
+                        <a href="#" class="text-light d-flex justify-content-center nav-link">管理個人資料></a>
+                    </div>
+                </div>
+                <nav class="nav nav-pills flex-column ">
+                        <a class="nav-link text-black" href="#item-1" style="width: 280px;">
+                            <span class="text-center">
+                                <img src="img/order_icon.png" class="me-4 " style="width: 20px;height: 20px;"></span>訂單
+                        </a>
+                        <a class="nav-link text-black" href="#item-2" style="width: 280px;">
+                            <span class="text-center">
+                                <img src="img/voucher_ticket.png" class="me-4 " style="width: 20px;height: 20px;"></span>可用優惠碼
+                        </a>
+                        <a class="nav-link text-black" href="#item-1" style="width: 280px;">
+                            <span class="text-center">
+                                <img src="img/comment_icon.png" class="me-4 " style="width: 20px;height: 20px;"></span>評價
+                        </a>
+                        <a class="nav-link text-black" href="#item-1" style="width: 280px;">
+                            <span class="text-center">
+                                <img src="img/paymentmanger_icon.png" class="me-4 " style="width: 20px;height: 20px;"></span>管理方式
+                        </a>
+                        <a class="nav-link text-black" href="favorite.html" style="width: 280px;">
+                            <span class="text-center">
+                                <img src="img/heart_icon.png" class="me-4 " style="width: 20px;height: 20px;"></span>我的最愛
+                        </a>
+                        <a class="nav-link text-black" href="#item-1" style="width: 280px;">
+                            <span class="text-center">
+                                <img src="img/account_icon.png" class="me-4 " style="width: 20px;height: 20px;"></span>帳戶設定
+                        </a>
+                </nav>
+            </nav>
+            <!-- 此為內容欄 -->
+            <nav class="ms-2 flex-fill">
+                <h4 class=" fw-bold ms-2 mt-4">我的最愛</h4>
+                <div class="my-4">
+                    <button type="button" class="btn btn-outline-secondary rounded-pill text-white bg-warning">全部</button>
+                    <button type="button" class="btn btn-outline-secondary rounded-pill text-black">景點門票</button>
+                    <button type="button" class="btn btn-outline-secondary rounded-pill text-black">行程&體驗</button>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 ms-2 position-relative">
+                    <div class="card me-2 p-0" style="width: 270px;height: 350px;">
+                        <a href="#" class="text-reset text-decoration-none">
+                        <img src="https://res.klook.com/image/upload/c_fill,w_1160,h_474/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/ndksylyfmpuvc6fkfs1x.webp"
+                            alt="shopcard" class="card-img-top rounded" style="height: 150px;">
+                            <span class="position-absolute badge"
+                            style="top:10px;right:10px;"><img src="data:image/png;base64,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">
+                            <span class="visually-hidden">unread
+                                messages</span></span>
+                        <div class="card-body mb-4 pt-0 pe-0">
+                            <div class="justify-content-center m-0 p-0" style="height: 125px;">
+                            <small class="m-0 text-muted">台北</small>
+                            <h5 class="card-title fs-6 text-break ">2024尋龍祭|恐龍馬戲團擬真劇場|兒童新樂園|迎金龍過好年</h5>
+                            <p style="font-size: smaller;" class="mb-0">⭐<span class="text-warning ">4.7</span>(286)．10K+人參加過</p>
+                            <small class="mt-0"><span class="badge bg-secondary text-gray">熱賣中</span>
+                                <span class="badge bg-secondary">立即確認</span>
+                                <span class="badge bg-secondary">現在預定</span></small>
+                                </div>
+                        </div>
+                        <p class="card-text fw-bold ms-4 mb-1" style="font-size: 14px;">NT$ 450<small class="text-muted mt-4"> 起</small></p>
+                        </a>
+                    </div>
+                    <div class="card me-2 p-0" style="width: 270px;height: 350px;">
+                        <a href="#" class="text-reset text-decoration-none">
+                        <img src="https://res.klook.com/image/upload/c_fill,w_1160,h_474/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/bag6dbfjgtcznre1rwad.webp"
+                            alt="shopcard" class="card-img-top rounded mb-0" style="height: 150px;">
+                            <span class="position-absolute badge "
+                            style="top:10px;right:10px;"><img src="data:image/png;base64,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">
+                            <span class="visually-hidden">unread
+                                messages</span></span>
+                        <div class="card-body mb-4 pt-0">
+                            <div class="justify-content-center mt-0 p-0" style="height: 125px;">
+                            <small class="m-0 text-muted">東京</small>
+                            <h5 class="card-title fs-6 text-break mb-0">Suica西瓜卡(IC卡)</h5>
+                            <p style="font-size: smaller;" class="mb-0">⭐<span class="text-warning ">4.8</span>(12,339)．100K+人參加過</p>
+                            <small class="mt-0"><span class="badge bg-secondary text-gray">熱賣中</span>
+                                <span class="badge bg-secondary">立即確認</span></small>
+                                </div>
+                        </div>
+                        <p class="card-text fw-bold ms-4 mb-1" style="font-size: 14px;">NT$ 313</p>
+                        </a>
+                    </div>
+                    <div class="card me-2 p-0" style="width: 270px;height: 350px;">
+                        <a href="#" class="text-reset text-decoration-none">
+                        <img src="https://res.klook.com/image/upload/c_crop,h_450,w_800,x_0,y_49,z_0.6/c_fill,w_1265,h_712/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/mj66djjynbe4qal861sd.webp"
+                            alt="shopcard" class="card-img-top rounded" style="height: 150px;">
+                            <span class="position-absolute badge"
+                            style="top:10px;right:10px;"><img src="data:image/png;base64,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">
+                            <span class="visually-hidden">unread
+                                messages</span></span>
+                        <div class="card-body mb-4 pt-0">
+                            <div class="justify-content-center m-0 p-0" style="height: 125px;">
+                            <small class="m-0 text-muted">台北</small>
+                            <h5 class="card-title fs-6 text-break mb-0">東京|三鷹森吉卜力美術館&井之頭公園徒步之旅</h5>
+                            <p style="font-size: smaller;" class="mb-0">⭐<span class="text-warning ">3.6</span>(97)．4K+人參加過</p>
+                            <small class="mt-0"><span class="badge bg-secondary text-gray">中文導遊</span>
+                                <span class="badge bg-secondary">免費取消</span>
+                                <span class="badge bg-secondary">立即確認</span></small>
+                                </div>
+                        </div>
+                        <p class="card-text fw-bold ms-4 mb-1" style="font-size: 14px;">NT$ 1,843</p>
+                        </a>
+                    </div>
+                <!-- <div class="d-flex justify-content-center align-items-center ms-2"></div> -->
+                </div>
+                <p class="d-grid gap-2 d-md-flex justify-content-center m-4">已經到底啦~</p>
+            </nav>
+            </div>
+    </div>
+    <nav class="bg-body d-flex pt-4" style="width: 1200px;margin: auto;height: 90px;">此為底部</nav>
+
+</body>
+</html>

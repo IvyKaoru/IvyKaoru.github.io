@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>未付款訂單</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <style>
+        .nav-link:hover{
+            background: #e6e6e6;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+    <nav class="bg-body d-flex pt-4" style="width: 1200px;margin: auto;">此為導覽列</nav>
+    <!-- 左側導覽列 -->
+    <div class="bg-light">
+        <div class="d-flex pt-4" style="width: 1200px;margin:auto;">
+            <nav class="navbar navbar-light bg-body flex-column align-items-stretch m-3 rounded p-0 h-25"
+                id="navbar-member">
+                <div class="d-flex justify-content-center rounded mb-0"
+                    style="background:linear-gradient(#6cabd3,#6eb3d2,white);height: 275px;">
+                    <div class="flex-shrink-0 mt-4">
+                        <img src="img/avatar.png" class="rounded-circle border border-2 border-white mx-auto d-block"
+                            style="width: 90px;height: 90px;">
+                        <p class="mt-4 text-light d-flex justify-content-center fs-4 fw-bold mb-0">用戶名</p>
+                        <a href="#" class="text-light d-flex justify-content-center nav-link">管理個人資料></a>
+                    </div>
+                </div>
+                <nav class="nav nav-pills flex-column ">
+                        <a class="nav-link text-black" href="#item-1" style="width: 280px;">
+                            <span class="text-center">
+                                <img src="img/order_icon.png" class="me-4 " style="width: 20px;height: 20px;"></span>訂單
+                        </a>
+                        <a class="nav-link text-black" href="#item-2" style="width: 280px;">
+                            <span class="text-center">
+                                <img src="img/voucher_ticket.png" class="me-4 " style="width: 20px;height: 20px;"></span>可用優惠碼
+                        </a>
+                        <a class="nav-link text-black" href="#item-1" style="width: 280px;">
+                            <span class="text-center">
+                                <img src="img/comment_icon.png" class="me-4 " style="width: 20px;height: 20px;"></span>評價
+                        </a>
+                        <a class="nav-link text-black" href="#item-1" style="width: 280px;">
+                            <span class="text-center">
+                                <img src="img/paymentmanger_icon.png" class="me-4 " style="width: 20px;height: 20px;"></span>管理方式
+                        </a>
+                        <a class="nav-link text-black" href="favorite.html" style="width: 280px;">
+                            <span class="text-center">
+                                <img src="img/heart_icon.png" class="me-4 " style="width: 20px;height: 20px;"></span>我的最愛
+                        </a>
+                        <a class="nav-link text-black" href="#item-1" style="width: 280px;">
+                            <span class="text-center">
+                                <img src="img/account_icon.png" class="me-4 " style="width: 20px;height: 20px;"></span>帳戶設定
+                        </a>
+                </nav>
+            </nav>
+            <!-- 右側內容欄 -->
+            <nav class="ms-2 flex-fill">
+                <div class="dropdown">
+                    <p class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenu">未付款訂單
+                    </p>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuP">
+                        <li>
+                            <a class="dropdown-item" href="#">訂單</a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <a class="dropdown-item " href="order_nopay.html" style="color: orange;">未付款訂單</a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <a class="dropdown-item" href="#">已封存訂單</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card mb-3" style="max-width: 860px;padding:25px 60px ;max-height: 230px;">
+                    <div class="row g-0 justify-content-between">
+                        <div class="col-md-8  m-0 p-0">
+                        <div class="card-body m-0 p-0">
+                            <h5 class="card-title fw-bold fs-4 m-0">厲陰宅之旅 沉浸式體驗展</h5>
+                            <p class="card-text m-0 fs-6">展期單人票</p>
+                            <p class="card-text m-0">兌換期內皆適用</smal>
+                            <p class="card-text m-0">每張*1</p>
+                            <p class="card-text fw-bold m-0">應付金額:NT$ 400</p>
+                            <p class="card-text m-0">訂單已過期</p>
+                            <a href="#" class="btn btn-outline-dark">重新預定</a>
+                        </div>
+                        </div>
+                        <div class="col-md-3">
+                            <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_65,f_auto/c_fill,w_160,h_160/activities/gqldzave8xke0mtsciey.jpg" class="img-fluid rounded col-md-12" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3" style="max-width: 860px;padding:25px 60px ;max-height: 230px;">
+                    <div class="row g-0 justify-content-between">
+                        <div class="col-md-8  m-0 p-0">
+                        <div class="card-body m-0 p-0">
+                            <h5 class="card-title fw-bold fs-4 m-0">厲陰宅之旅 沉浸式體驗展</h5>
+                            <p class="card-text m-0 fs-6">展期單人票</p>
+                            <p class="card-text m-0">兌換期內皆適用</smal>
+                            <p class="card-text m-0">每張*1</p>
+                            <p class="card-text fw-bold m-0">應付金額:NT$ 400</p>
+                            <p class="card-text m-0">訂單已過期</p>
+                            <a href="#" class="btn btn-outline-dark">重新預定</a>
+                        </div>
+                        </div>
+                        <div class="col-md-3">
+                            <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_65,f_auto/c_fill,w_160,h_160/activities/gqldzave8xke0mtsciey.jpg" class="img-fluid rounded col-md-12" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3" style="max-width: 860px;padding:25px 60px ;max-height: 230px;">
+                    <div class="row g-0 justify-content-between">
+                        <div class="col-md-8  m-0 p-0">
+                        <div class="card-body m-0 p-0">
+                            <h5 class="card-title fw-bold fs-4 m-0">厲陰宅之旅 沉浸式體驗展</h5>
+                            <p class="card-text m-0 fs-6">展期單人票</p>
+                            <p class="card-text m-0">兌換期內皆適用</smal>
+                            <p class="card-text m-0">每張*1</p>
+                            <p class="card-text fw-bold m-0">應付金額:NT$ 400</p>
+                            <p class="card-text m-0">訂單已過期</p>
+                            <a href="#" class="btn btn-outline-dark">重新預定</a>
+                        </div>
+                        </div>
+                        <div class="col-md-3">
+                            <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_65,f_auto/c_fill,w_160,h_160/activities/gqldzave8xke0mtsciey.jpg" class="img-fluid rounded col-md-12" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <nav class="bg-body d-flex pt-4" style="width: 1200px;margin: auto;height: 90px;">此為底部</nav>
+</body>
+</html>
+<!-- d-flex flex-row-reverse -->
