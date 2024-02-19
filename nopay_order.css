@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin:0;
+    font-family: "微軟正黑體","黑體";
+}
+body{
+    background-color: #f8f9fa;
+    margin: 0 20px 0 20px;
+}
+img{
+    vertical-align: none;
+    max-width: 100%;
+    height: auto;
+    margin: 4%;
+}
+.nav-link img{
+    width: 5%;
+    height: 5%;
+    margin: 0 6%;
+}
+li{
+    padding: 0;
+    margin: 0;
+    font-size: larger;
+    background-color: white;
+}
+li:hover{
+    background-color: #e6e6e6;
+}
+.navbar{
+    width: 25%;
+    height: auto;
+}
+.btn-link:hover{
+    background-color: #e6e6e6;
+}
+.dropdown-item:hover{
+    background-color: #e6e6e6;
+}
+/* 當裝置畫面為368px或以上執行此段樣式 */
+@media screen and (min-width:368px) {
+    p{
+        font-size: 14px;
+    }
+    h5{
+        font-size: 16px;
+    }
+    .btn-link{
+        font-size: 80%;
+    }
+    .navbar{
+        display: none;
+    }
+    .navbar-toggler{
+        display:initial;
+    }
+}
+@media screen and (min-width:1200px) {
+    p{
+        font-size: 16px;
+    }
+    h5{
+        font-size: 18px;
+    }
+    .btn-link{
+        font-size: 100%;
+    }
+    .navbar-toggler{
+        display: none;
+    }
+    .navbar{
+        display: initial;
+        margin-right: 20px;
+    }
+    body{
+        margin: 0 100px;
+    }
+}
