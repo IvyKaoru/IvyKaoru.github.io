@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin:0;
+    font-family: "微軟正黑體","黑體";
+}
+body{
+    background-color: #f8f9fa;
+    margin: 0 20px 0 20px;
+}
+img{
+    vertical-align: none;
+    max-width: 100%;
+    height: auto;
+    margin: 4%;
+}
+.card:hover {
+    position: relative;
+    bottom: 2px;
+}
+p{
+    font-size: 14px;
+}
+button{
+    border: solid;
+    border-radius: 9%;
+    border-color: #029278;
+    background-color: white;
+    font-size: 14px;
+    padding: 1%;
+}
+button:hover{
+    background-color: #029278;
+    color: white;
+}
+@media screen and (min-width:368px) {
+    th{
+        display: none;
+        border: none;
+    }
+    caption{
+        caption-side: top;
+        background: #e6e6e6;
+    }
+    table{
+        border: solid;
+        border-radius: 30px;
+        margin: 0;
+        font-size: 14px;
+    }
+    tr,td{
+        border: none;
+    }
+    #goodpicture{
+        width: 50%;
+        height: auto;
+    }
+    .table-responsive{
+        margin-left: 0;
+    }
+}
+@media screen and (min-width:1200px) {
+    body{
+        margin: 0 100px;
+    }
+    p{
+        font-size: 16px;
+    }
+    h5{}
+    h4{}
+    th{
+        display:block;
+    }
+    tr,td{
+        border-bottom: solid;
+        border-color: #e6e6e6;
+    }
+    caption{
+        display: none;
+    }
+    table{
+        border: none;
+    }
+    .table-responsive{
+        margin-left: 5%;
+    }
+
+}

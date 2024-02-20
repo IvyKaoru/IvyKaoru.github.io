@@ -31,7 +31,29 @@ li:hover{
     width: 25%;
     height: auto;
 }
-
+button{
+    border: solid;
+    border-radius: 20%/40%;
+    border-color: #029278;
+    background-color: white;
+    font-size: 14px;
+    padding: 1%;
+}
+div button:first-of-type{
+    border-radius: 30%/40%;
+    background-color: #029278;
+    color: white;
+}
+button[class*="mx-4"]{
+    background-color: #029278;
+    color: white;
+    width: 80%;
+    height:80%;
+}
+button:hover{
+    background-color: #029278;
+    color: white;
+}
 #filiter .btn:first-of-type{
     background-color: #ec672a;
 }

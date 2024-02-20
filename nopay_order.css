@@ -31,11 +31,20 @@ li:hover{
     width: 25%;
     height: auto;
 }
-.btn-link:hover{
-    background-color: #e6e6e6;
-}
 .dropdown-item:hover{
     background-color: #e6e6e6;
+}
+button{
+    border: solid;
+    border-radius: 9%;
+    border-color: #029278;
+    background-color: white;
+    font-size: 16px;
+    padding: 1%;
+}
+button:hover{
+    background-color: #029278;
+    color: white;
 }
 /* 當裝置畫面為368px或以上執行此段樣式 */
 @media screen and (min-width:368px) {
