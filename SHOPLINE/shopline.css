@@ -1,0 +1,194 @@
+*{
+    padding:0;
+    margin:0;
+    color: #102752;
+    font-family: 'Notosans2', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol","微軟正黑體","黑體";
+}
+img{
+    vertical-align: baseline;
+}
+a{
+    padding: 0;
+    text-decoration: none;
+}
+a>p{
+    color: #285ff6;
+    font-size: 16px;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    display: inline;
+}
+
+li{
+    width: 230px;
+    margin-bottom: 2%;
+    letter-spacing: 0.5px;
+}
+li::before {content: "●"; color: #285ff6;
+    display: inline-block; width: 1em;
+}
+a>span{
+    color: #285ff6;
+    position: relative;
+    top: 0px;
+    left: 10px;
+    transition: 0.5s;
+}
+a>span:hover {
+    left: 15px;
+}
+
+@media screen and (max-width:768px) {
+    .more,.title{
+        background-color: #f7f8f9;
+        padding: 50px 20px;
+    }
+    .title>h2{
+        text-align: center;
+        font-size: 30px;
+    }
+    .title>p{
+        margin-top: 20px;
+        font-size: 16px;
+        text-align: center;
+    }
+    /* 主要介紹 */
+    section{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 80px;
+    }
+    main{
+        padding: 50px 20px;
+    }
+    ul{
+        list-style: none;
+        margin-bottom: 40px;
+    }
+
+    h3{
+        font-size: 28px;
+        margin: 25px 0;
+    }
+    .content>p,.content2n>p{
+        font-size: 16px;
+        margin-bottom: 25px;
+        letter-spacing: 1px;
+    }
+    .image>img{
+        width: 100%;
+        height: auto;
+    }
+    /* 更多服務與功能 */
+    .more{
+        padding: 60px 20px;
+    }
+    h4{
+        font-size: 26px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    h5{
+        font-size: 24px;
+    }
+    .card>img{
+        width: 30%;
+        margin-bottom: 25px;
+    }
+    .card{
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    .card>p{
+        flex-wrap: wrap;
+        margin-top: 16px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .more,.title{
+        background-color: #f7f8f9;
+        padding: 50px;
+    }
+    .title>h2{
+        margin: 0 100px;
+        text-align: center;
+        font-size: 30px;
+    }
+    .title>p{
+        margin: 20px 100px 0 100px;
+        font-size: 16px;
+        text-align: center;
+    }
+    /* 主要介紹 */
+    section{
+        display:flex;
+        margin-bottom: 100px;
+    }
+    section:nth-of-type(2n){
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    ul{
+        list-style:none;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    main{
+        padding:80px 150px ;
+    }
+    li:nth-of-type(2n){
+        display: flex;
+        width: 230px;
+        margin-bottom: 2%;
+        letter-spacing: 0.5px;
+        margin-left: 10px;
+    }
+    h3{
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+    .content>p,.content2n>p{
+        font-size: 16px;
+        margin-bottom: 40px;
+        letter-spacing: 1px;
+    }
+    .content{
+        padding: 60px 100px 60px 0;
+    }
+    .content2n{
+        padding: 40px 0 40px 100px;
+    }
+    /* 更多服務與功能 */
+    .more{
+        padding: 100px 180px;
+    }
+    h4{
+        font-size: 26px;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    h5{
+        font-size: 24px;
+    }
+    .card-group{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card>img{
+        width: 30%;
+        margin-bottom: 25px;
+    }
+    .card{
+        width: 30%;
+        text-align: center;
+        margin: 0 30px 60px 0;
+    }
+    .card>p{
+        flex-wrap: wrap;
+        margin-top: 16px;
+    }
+}
